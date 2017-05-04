@@ -19,7 +19,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let loginVC = SigninViewController(nibName: "SigninViewController", bundle: nil)
+        let navigationVC = UINavigationController(rootViewController: loginVC)
+        self.present(navigationVC, animated: true, completion: nil)
+    }
+    
 
 }
 
